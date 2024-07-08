@@ -1,12 +1,10 @@
-import os
+import logging  # noqa
 from logging.config import dictConfig
 
 
 def setup_logging() -> None:
-    from .settings import Settings
-    os.environ['WDM_LOG_LEVEL'] = '0'
-
-    cfg = Settings.load()
+    from .config import Config
+    cfg = Config.load()
 
     return dictConfig(
         {
@@ -20,7 +18,7 @@ def setup_logging() -> None:
             "handlers": {
                 "console": {
                     "class": "logging.StreamHandler",
-                    "level": "DEBUG",
+                    "level": "INFO",
                     "formatter": "simple",
                     "stream": "ext://sys.stdout",
                 },
