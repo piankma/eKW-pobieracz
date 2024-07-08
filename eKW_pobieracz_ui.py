@@ -18,7 +18,9 @@ class Ui_MainWindow(object):
         MainWindow.setMinimumSize(QtCore.QSize(320, 620))
         MainWindow.setMaximumSize(QtCore.QSize(320, 700))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("ico/eKW.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(
+            QtGui.QPixmap("ico/eKW.jpg"), QtGui.QIcon.Normal, QtGui.QIcon.Off
+        )
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -282,27 +284,86 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "eKW pobieraczek 0.7"))
-        self.lineList.setToolTip(_translate("MainWindow", "<html><head/><body><p>ścieżka do listy z KW</p></body></html>"))
-        self.lineList.setPlaceholderText(_translate("MainWindow", "ścieżka do listy z KW"))
-        self.btnList.setToolTip(_translate("MainWindow", "<html><head/><body><p>Ścieżka do pliku tekstowego z listą oznaczeń ksiąg wieczystych.</p></body></html>"))
-        self.lineSave.setToolTip(_translate("MainWindow", "<html><head/><body><p>folder zapisu ksiąg</p></body></html>"))
-        self.lineSave.setPlaceholderText(_translate("MainWindow", "folder zapisu ksiąg"))
-        self.btnSave.setToolTip(_translate("MainWindow", "<html><head/><body><p>Wybór folderu do zapisu pobieranych ksiąg wieczystych</p></body></html>"))
-        self.btnRun.setToolTip(_translate("MainWindow", "<html><head/><body><p>Rozpocznij pobieranie ksiąg z listy z pliku txt.</p></body></html>"))
+        self.lineList.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>ścieżka do listy z KW</p></body></html>",
+            )
+        )
+        self.lineList.setPlaceholderText(
+            _translate("MainWindow", "ścieżka do listy z KW")
+        )
+        self.btnList.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Ścieżka do pliku tekstowego z listą oznaczeń ksiąg wieczystych.</p></body></html>",
+            )
+        )
+        self.lineSave.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>folder zapisu ksiąg</p></body></html>",
+            )
+        )
+        self.lineSave.setPlaceholderText(
+            _translate("MainWindow", "folder zapisu ksiąg")
+        )
+        self.btnSave.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Wybór folderu do zapisu pobieranych ksiąg wieczystych</p></body></html>",
+            )
+        )
+        self.btnRun.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Rozpocznij pobieranie ksiąg z listy z pliku txt.</p></body></html>",
+            )
+        )
         self.btnRun.setText(_translate("MainWindow", "Pobierz pojedynczo"))
         self.groupBox.setTitle(_translate("MainWindow", "Generowanie listy KW"))
-        self.lineSign.setToolTip(_translate("MainWindow", "<html><head/><body><p>Kod sądu np. BB1B</p></body></html>"))
+        self.lineSign.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Kod sądu np. BB1B</p></body></html>",
+            )
+        )
         self.lineSign.setPlaceholderText(_translate("MainWindow", "Kod sądu np. BB1B"))
-        self.lineFloor.setToolTip(_translate("MainWindow", "<html><head/><body><p>numer początkowy np. 1</p></body></html>"))
-        self.lineFloor.setPlaceholderText(_translate("MainWindow", "numer początkowy np. 1"))
-        self.lineRoof.setToolTip(_translate("MainWindow", "<html><head/><body><p>numer końcowy np. 99999999</p></body></html>"))
-        self.lineRoof.setPlaceholderText(_translate("MainWindow", "numer końcowy np. 99999999"))
-        self.btnGen.setToolTip(_translate("MainWindow", "<html><head/><body><p>Generuj listę z potencjalnymi numerami ksiąg wieczystych z danego zakresu i zapisz do pliku txt.</p></body></html>"))
+        self.lineFloor.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>numer początkowy np. 1</p></body></html>",
+            )
+        )
+        self.lineFloor.setPlaceholderText(
+            _translate("MainWindow", "numer początkowy np. 1")
+        )
+        self.lineRoof.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>numer końcowy np. 99999999</p></body></html>",
+            )
+        )
+        self.lineRoof.setPlaceholderText(
+            _translate("MainWindow", "numer końcowy np. 99999999")
+        )
+        self.btnGen.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Generuj listę z potencjalnymi numerami ksiąg wieczystych z danego zakresu i zapisz do pliku txt.</p></body></html>",
+            )
+        )
         self.btnGen.setText(_translate("MainWindow", "Generuj listę"))
-        self.btnGenSave.setToolTip(_translate("MainWindow", "<html><head/><body><p>Rozpocznij pobieranie ksiąg z wskazanego zakresu.</p></body></html>"))
+        self.btnGenSave.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Rozpocznij pobieranie ksiąg z wskazanego zakresu.</p></body></html>",
+            )
+        )
         self.btnGenSave.setText(_translate("MainWindow", "Pobierz z zakresu"))
-        self.btnGenSaveTurbo.setText(_translate("MainWindow", "Turbo\n"
-"Pobierz z zakresu"))
+        self.btnGenSaveTurbo.setText(
+            _translate("MainWindow", "Turbo\n" "Pobierz z zakresu")
+        )
         self.groupBox_2.setTitle(_translate("MainWindow", "Do pobrania"))
         self.ch1o.setText(_translate("MainWindow", "Dział I-O"))
         self.ch1s.setText(_translate("MainWindow", "Dział I-SP"))
@@ -315,26 +376,46 @@ class Ui_MainWindow(object):
         self.chTXT.setText(_translate("MainWindow", "TXT"))
         self.chJSON.setText(_translate("MainWindow", "raport JSON"))
         self.chCSV.setText(_translate("MainWindow", "CSV"))
-        self.btnLog.setToolTip(_translate("MainWindow", "<html><head/><body><p>Otwórz plik z zapisanymi logami z ostatniej operacji.</p></body></html>"))
+        self.btnLog.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Otwórz plik z zapisanymi logami z ostatniej operacji.</p></body></html>",
+            )
+        )
         self.btnLog.setText(_translate("MainWindow", "Logi"))
-        self.btnErr.setToolTip(_translate("MainWindow", "<html><head/><body><p>Otwórz plik z odnotowanymi błędami działania programu lub wsadu do programu.</p></body></html>"))
+        self.btnErr.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Otwórz plik z odnotowanymi błędami działania programu lub wsadu do programu.</p></body></html>",
+            )
+        )
         self.btnErr.setText(_translate("MainWindow", "Błędy"))
         self.groupBox_4.setTitle(_translate("MainWindow", "Pobieranie wielowątkowe"))
-        self.btnTurbo.setText(_translate("MainWindow", "Turbo pobieranie\n"
-"! O S T R O Ż N I E !"))
+        self.btnTurbo.setText(
+            _translate("MainWindow", "Turbo pobieranie\n" "! O S T R O Ż N I E !")
+        )
         self.label.setText(_translate("MainWindow", "Liczba operacji:"))
-        self.lblBanner.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><img src=\":/baner/res/baner_310x60.jpg\"/></p></body></html>"))
+        self.lblBanner.setText(
+            _translate(
+                "MainWindow",
+                '<html><head/><body><p align="center"><img src=":/baner/res/baner_310x60.jpg"/></p></body></html>',
+            )
+        )
         self.btnPause.setText(_translate("MainWindow", "Pauza/Wznowienie"))
         self.btnStop.setText(_translate("MainWindow", "Stop"))
         self.groupBox_3.setTitle(_translate("MainWindow", "Zmienne"))
-        self.chMerge.setText(_translate("MainWindow", "Złącz działy w jeden\n"
-"pdf"))
-        self.chError.setText(_translate("MainWindow", "Gdy brak aktualnej \n"
-"pobieraj zupełną"))
+        self.chMerge.setText(_translate("MainWindow", "Złącz działy w jeden\n" "pdf"))
+        self.chError.setText(
+            _translate("MainWindow", "Gdy brak aktualnej \n" "pobieraj zupełną")
+        )
         self.chBg.setText(_translate("MainWindow", "Zachować tło strony"))
-        self.chImg.setToolTip(_translate("MainWindow", "<html><head/><body><p>Włącz lub wyłącz ładowanie grafik na stronie (może zmniejszyć zużycie ramu)</p></body></html>"))
-        self.chImg.setText(_translate("MainWindow", "ładowanie grafik\n"
-"strony"))
+        self.chImg.setToolTip(
+            _translate(
+                "MainWindow",
+                "<html><head/><body><p>Włącz lub wyłącz ładowanie grafik na stronie (może zmniejszyć zużycie ramu)</p></body></html>",
+            )
+        )
+        self.chImg.setText(_translate("MainWindow", "ładowanie grafik\n" "strony"))
         self.menu_Plik.setTitle(_translate("MainWindow", "&Plik"))
         self.menu_O_programie.setTitle(_translate("MainWindow", "&O programie"))
         self.menu_Muzyka.setTitle(_translate("MainWindow", "&Muzyka"))
@@ -342,4 +423,6 @@ class Ui_MainWindow(object):
         self.action_github.setText(_translate("MainWindow", "&Github"))
         self.action_Instrukcja.setText(_translate("MainWindow", "&Instrukcja"))
         self.action_muzyka.setText(_translate("MainWindow", "&włącz/wyłącz"))
+
+
 import res_rc
