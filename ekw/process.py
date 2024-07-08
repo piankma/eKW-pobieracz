@@ -134,7 +134,7 @@ class ScraperProcess:
                 By.CSS_SELECTOR,
                 "#content-wrapper > div > div:nth-child(4) > div:nth-child(6) > div.content-column-50 > div > p",
             ).text
-            self.data["loc"] = self.data["loc"].split(",")
+            self.data["loc"] = self.data["loc"].strip().split(",")
         except (InvalidArgumentException, NoSuchElementException):
             self.data["loc"] = ["", ""]
 
@@ -142,7 +142,7 @@ class ScraperProcess:
             self.data["wlasciciel"] = self.browser.find_element(
                 By.CSS_SELECTOR,
                 "#content-wrapper > div > div:nth-child(4) > div:nth-child(7) > div.content-column-50 > div",
-            ).text
+            ).text.strip()
         except (InvalidArgumentException, NoSuchElementException):
             self.data["wlasciciel"] = ""
 
